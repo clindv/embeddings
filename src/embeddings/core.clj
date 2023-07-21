@@ -1,7 +1,8 @@
 (ns embeddings.core
+  (:require [embeddings.glove :as glove])
   (:gen-class))
 
 (defn -main
-  "I don't do a whole lot ... yet."
   [& args]
-  (println "Hello, World!"))
+  (glove/init)
+  (println "vectors:"glove/vec-size " amount:" glove/amount))
